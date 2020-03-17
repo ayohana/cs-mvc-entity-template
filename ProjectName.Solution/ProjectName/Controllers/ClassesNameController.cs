@@ -8,10 +8,25 @@ namespace ProjectName.Controllers
   public class ClassesNameController : Controller
   {
 
-    // [HttpGet("/classesname")]
-    // public ActionResult Index()
+    private readonly ProjectNameContext _db;
+
+    public ItemsController(ProjectNameContext db)
+    {
+      _db = db;
+    }
+
+    public ActionResult Index()
+    {
+      List<Item> model = _db.Items.ToList();
+      return View(model);
+    }
+
+    // [HttpPost]
+    // public ActionResult Create(Item item)
     // {
-    //   return View();
+    //   _db.Items.Add(item);
+    //   _db.SaveChanges();
+    //   return RedirectToAction("Index");
     // }
 
   }

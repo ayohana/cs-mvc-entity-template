@@ -5,6 +5,7 @@ namespace ProjectName.Models
 {
   public class ClassName
   {
-    // Back-end code goes here
+    public int ClassNameId { get; set; }
+    
   }
 }
