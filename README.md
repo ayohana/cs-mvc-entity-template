@@ -25,15 +25,26 @@
 
 ## Setup/Installation Requirements
 
-* Download [.NET Core](https://dotnet.microsoft.com/download/dotnet-core/)
+* Download [.NET Core](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-c-and-net) (Mac/Windows OS) - _FREE!_
+* Download [MySQL](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql) (Mac/Windows OS) - _FREE!_
 * Clone this [repository](https://github.com/ayohana/ProjectName.git/)
-* Open the `Command Line Interface`.
-  * Navigate into the `ProjectName` directory.
-    * Type in the command `dotnet restore` to gather tools and dependencies for the application.
-    * Type in the command `dotnet run` to run the application.
-  * Navigate into the `ProjectName.Tests` directory.
-    * Type in the command `dotnet restore` to gather tools and dependencies for the tests.
-    * Type in the command `dotnet test` to run the tests. 
+  * Open the `Command Line Interface`.
+  * Enter `$ cd Desktop` to navigate into your Desktop (or anywhere you'd like to save this repo into).
+  * Enter `$ git clone https://github.com/ayohana/ProjectName.git/`.
+* Create your database.
+  * Open the `Command Line Interface` (CLI).
+  * Enter `mysql -uroot -p` and the CLI will prompt for your MYSQL password.
+  * Enter `CREATE DATABASE database_name;`
+  * Enter `SHOW DATABASES;` to confirm your database was created in your server's list of databases.
+  * Enter `USE database_name;` to connect to your database.
+  * Enter `SELECT DATABASE();` to verify you are connected to the correct database.
+  * Enter `CREATE TABLE stylists (StylistID serial PRIMARY KEY, Name VARCHAR (255), Specialty VARCHAR (255), HireDate DATETIME);` to create your table of stylists.
+  * Enter `CREATE TABLE clients (ClientID serial PRIMARY KEY, Name VARCHAR(255), StylistID INT);` to create your table of clients.
+  * Enter `DESCRIBE stylists;` or `DESCRIBE clients` to see your table columns.
+* Run the application.
+  * Navigate into the `ProjectName` directory `$ cd Desktop/ProjectName/ProjectName.Solution/ProjectName`
+    * Enter the command `dotnet restore` to gather tools and dependencies for the application.
+    * Enter `dotnet run` to run the application.
 
 ## Known Bugs
 
@@ -46,9 +57,9 @@ Feel free to provide feedback via email: adela.yohana@gmail.com.
 ## Technologies Used
 
 * C#
-* [.NET Core](https://dotnet.microsoft.com/download/dotnet-core/)
 * MVC Pattern
-* MySQL
+* [.NET Core](https://dotnet.microsoft.com/download/dotnet-core/) (Windows OS)
+* [MySQL](https://dev.mysql.com/downloads/file/?id=484919) (Windows OS)
 
 ### License
 
