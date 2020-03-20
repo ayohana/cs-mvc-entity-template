@@ -1,6 +1,6 @@
 # [Project Name](https://github.com/ayohana/ProjectName.git/)
 
-#### C# Basic Web Applications Exercise for [Epicodus](https://www.epicodus.com/), 03.15.2020
+#### C# Basic Web Applications Exercise for [Epicodus](https://www.epicodus.com/), 03.20.2020
 
 #### By [**Adela Darmansyah**](https://ayohana.github.io/portfolio/)
 

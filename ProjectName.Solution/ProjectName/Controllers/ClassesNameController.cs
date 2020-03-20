@@ -1,26 +1,32 @@
-using System;
-using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using ProjectName.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ProjectName.Controllers
 {
   public class ClassesNameController : Controller
   {
-
     private readonly ProjectNameContext _db;
 
-    public ItemsController(ProjectNameContext db)
+    public ClassesNameController(ProjectNameContext db)
     {
       _db = db;
     }
 
-    public ActionResult Index()
-    {
-      List<Item> model = _db.Items.ToList();
-      return View(model);
-    }
+    // public ActionResult Index()
+    // {
+    //   List<Item> model = _db.ClassesName.Include(classes => classes.ParentClassName).ToList();
+    //   return View(model);
+    // }
+
+    // public ActionResult Create()
+    // {
+    //   ViewBag.ParentClassNameId = new SelectList(_db.ParentClassesName, "ParentClassNameId", "Name");
+    //   return View();
+    // }
 
     // [HttpPost]
     // public ActionResult Create(Item item)
